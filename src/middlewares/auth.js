@@ -11,7 +11,7 @@ const userAuth = async (req, res, next) => {
     const { _id } = jwt.verify(token, "secretPassword");
     const user = await User.findById(_id);
     if (!user) {
-      return res.status(401).send("User does not exist.");
+      return res.status(404).send("User does not exist.");
     }
 
     req.user = user;
