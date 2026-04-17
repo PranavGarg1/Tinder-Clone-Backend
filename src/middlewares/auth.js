@@ -22,6 +22,8 @@ const userAuth = async (req, res, next) => {
   }
 };
 
+//checking github commands
+
 module.exports = {
   userAuth,
 };
